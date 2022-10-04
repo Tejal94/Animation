@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position CSS Props</title>
+
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .back{
+            background-color: aquamarine;
+            height: 200vh;
+            width: 100vw;
+        }
+
+        .box{
+            background-color: brown;
+            height: 100px;
+            width: 100px;
+            position: relative;
+            top: 50vh;
+            left: 40vw;
+            border-radius: 0px;
+            box-shadow: 10px 10px 15px black;
+            animation: anim 4s;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes anim{
+            /* from {
+                transform: translate(0px, 200px);
+                background-color: brown;
+            }
+            to {background-color: darkblue;} */
+
+            0%{
+                /* margin-top: 10;
+                margin-left: 40; */
+                transform: rotate(0deg)
+                            translate(-165px)
+                            rotate(0deg);
+
+            }
+
+            100%{
+                transform: rotate(360deg)
+                            translate(-165px)
+                            rotate(-360deg);
+            }
+            /*10%{
+                
+                margin-top: 20;
+                margin-left: 50;
+            }
+            20%{
+                margin-top: 30;
+                margin-left: 60;
+            } */
+
+
+        }
+
+        .box1{
+            background-color: rgb(14, 135, 248);
+            height: 100px;
+            width: 100px;
+            position: absolute;
+            top: 50vh;
+            left: 40vw;
+            border-radius: 0px;
+            box-shadow: 10px 10px 15px black;
+            translate: 0vw 20vh; 
+            
+        }
+        
+
+        /* .box:hover{
+            background-color: chocolate;
+            rotate: 45deg;
+            transition:all ease-in-out .5;
+            
+        } */
+    </style>
+
+</head>
+<body>
+    <div class="back">
+         <div class="box">
+         Box
+    </div>
+    <!-- <div class="box1"></div> -->
+    <div class="box2"></div>
+    <div class="box3"></div>
+</div>
+</body>
+</html>
